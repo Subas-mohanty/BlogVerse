@@ -1,14 +1,28 @@
 import { userSchema } from "@subasmohanty/zod";
 import { ChangeEvent, useState } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import axios from "axios";
+import { BACKEND_URL } from "../config";
 
 export const Auth = ({ type }: { type: "signup" | "signin" }) => {
+  const navigate = useNavigate();
   const [postInputs, setPostInputs] = useState<userSchema>({
     name: "",
     email: "",
     password: "",
   });
 
+  async function sendRequest(){
+    try {
+      const response = await axios.post(`${BACKEND_URL}/api/v1/user/${type == "signup" ? "signup" : "signin"}`, postInputs);
+      const jwt = response.data;
+      localStorage.setItem("token", jwt);
+      navigate("/blogs")
+    } catch (error) {
+      // show alert to user that signup has failed
+      alert("An error occured, Please sign up again");
+    }
+  }
   return (
     <div className="flex justify-center items-center">
         {/* I have to put this in the top left corner */}
@@ -73,7 +87,7 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
               }}
             />
           </div>
-          <button className="mt-6 bg-black text-white font-bold py-2 px-4 rounded-lg hover:cursor-pointer">
+          <button onClick={sendRequest} className="mt-6 bg-black text-white font-bold py-2 px-4 rounded-lg hover:cursor-pointer">
             {type === "signup" ? "sign up" : "sign in"}
           </button>
         </div>
