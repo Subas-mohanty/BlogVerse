@@ -32,13 +32,14 @@ userRouter.post("/signup", async (c) => {
     const user = await prisma.user.create({
       data:{
         email : body.email,
-        password : body.password
+        password : body.password,
+        name : body.name
       }
     })
     const secret = c.env.JWT_SECRET;
     const token = await sign( {id : user.id}, secret) // here we are not storing email and password in the jwt, we are storing the id of the user which is created, remember in the user table we have id as primary key, that id is being used here
 
-    return c.json({token : token})
+    return c.json({jwt : token})
 
   } catch (error) {
     // we can't directly do this in hono like express

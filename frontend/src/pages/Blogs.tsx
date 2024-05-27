@@ -1,35 +1,46 @@
 import { Appbar } from "../components/Appbar";
 import BlogCard from "../components/BlogCard";
+import { BlogSkeleton } from "../components/BlogsSkeleton";
+import { useBlogs } from "../hooks";
 
 export default function Blogs() {
-    return <div>
-         <Appbar/>
+  const { blogs, loading } = useBlogs();
+
+  if (loading) {
+    return (
+      <div >
         <div>
-        <div className="flex justify-center">
-        <div className=" max-w-xl mt-[70px]">
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-        <BlogCard authorName="Subas Mohanty" title="Title of the blog" content="content of the blogmlskf;aks;flak a;skdfa;dfoiew ;las dfoawefawo dfo;aweif aokdfioaw efoadfkadf;lkaw fawoekfawo; fowfoawf wkdfoa fow owa ifowafe owaf ofwf" published="24th may 2024"/>
-    </div>
-    </div>
+         <Appbar />
         </div>
+        {/* make a skeleton for the loading */}
+        <BlogSkeleton/>
+        <BlogSkeleton/>
+        <BlogSkeleton/>
+        <BlogSkeleton/>
+        <BlogSkeleton/>
+        <BlogSkeleton/>
+      </div>
+    );
+  }
+
+  return (
+    <div>
+      <Appbar />
+      <div>
+        <div className="flex justify-center">
+          <div className=" max-w-xl mt-[70px]">
+            {blogs.map((blog) => (
+              <BlogCard
+                id={blog.id}
+                authorName={blog.author.name || "Anonymous"}
+                title={blog.title}
+                content={blog.content}
+                published="24th may 2024"
+              />
+            ))}
+          </div>
+        </div>
+      </div>
     </div>
+  );
 }

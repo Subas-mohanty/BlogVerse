@@ -1,10 +1,14 @@
+import { Link } from "react-router-dom";
+
 interface BlogsType {
+  id : string;
   authorName: string;
   title: string;
   content: string;
   published: string;
 }
 export default function BlogCard({
+  id,
   authorName,
   title,
   content,
@@ -12,6 +16,7 @@ export default function BlogCard({
 }: BlogsType) {
   return (
     <div>
+      <Link to={`/blog/${id}`}>
       <div className="p-4 border-b border-slate-200 ">
           <div className="flex">
             <div className="flex justify-center flex-col">
@@ -32,6 +37,7 @@ export default function BlogCard({
           </div>
           <div>{`${Math.ceil(content.length / 70)} minute(s) read`}</div>
         </div>
+      </Link>
     </div>
   );
 }
