@@ -1,5 +1,5 @@
 import { userSchema } from "@subasmohanty/zod";
-import { ChangeEvent, useState } from "react";
+import { ChangeEvent, useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import axios from "axios";
 import { BACKEND_URL } from "../config";
@@ -26,10 +26,6 @@ export const Auth = ({ type }: { type: "signup" | "signin" }) => {
   }
   return (
     <div className="flex justify-center items-center">
-        {/* I have to put this in the top left corner */}
-      {/* <div className="self-start text-start">
-        BlogVerse
-      </div> */}
       <div className="h-screen flex justify-center">
         <div className="flex flex-col justify-center">
           <div className="px-10">

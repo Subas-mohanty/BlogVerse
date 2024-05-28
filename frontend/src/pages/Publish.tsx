@@ -36,7 +36,6 @@ export function Publish() {
                 Authorization : localStorage.getItem("token")
               }
             })
-            console.log(response.data);
             
             navigate(`/blog/${response.data.id}`)
           }}

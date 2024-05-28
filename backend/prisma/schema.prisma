@@ -26,6 +26,7 @@ model Post{
   title String
   content String
   authorId String
+  publishDate String
   // let's breakdown what this below line actually means :-
   // the author field in the Post model represents the relation between the User table/model and the Post model
   // author User means it is related with User model

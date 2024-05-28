@@ -9,7 +9,8 @@ export interface BlogType{
     content : string,
     author : {
         name : string
-    }
+    },
+    publishDate : string
 }
 
 

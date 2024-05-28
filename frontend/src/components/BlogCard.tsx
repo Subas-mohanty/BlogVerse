@@ -59,7 +59,7 @@ export function Avatar({
         size == "small" ? "w-6 h-6" : "w-10 h-10"
       }  bg-gray-300 overflow-hidden rounded-full`}
     >
-      <span className="font-medium text-gray-700 ">
+      <span className="text-gray-700 font-bold text-lg">
         {authorName[0].toUpperCase()}
       </span>
     </div>

@@ -13,7 +13,7 @@ export function FullBlog({blog} : {blog : BlogType}){
               {blog.title}
             </div>
             <div className="text-slate-500 pt-2">
-              Posted n 28th May 2024
+              Posted on 28th May 2024
             </div>
             <div className="pt-4">
               {blog.title}

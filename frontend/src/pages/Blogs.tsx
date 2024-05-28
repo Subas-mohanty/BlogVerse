@@ -31,11 +31,12 @@ export default function Blogs() {
           <div className=" max-w-xl mt-[70px]">
             {blogs.map((blog) => (
               <BlogCard
+              key={blog.id}
                 id={blog.id}
                 authorName={blog.author.name || "Anonymous"}
                 title={blog.title}
                 content={blog.content}
-                published="24th may 2024"
+                published= {"28th May 2024"}
               />
             ))}
           </div>
